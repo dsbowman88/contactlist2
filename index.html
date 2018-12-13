@@ -9,6 +9,19 @@
     <script src="main.js"></script>
 </head>
 <body>
-    
+    <input type="text" id="myNewName" placeholder="New name">
+    <button onclick="voegIemandToe()">Add</button>
+    <ul id="myList">
+
+    </ul>
+    <script>
+    function voegIemandToe(){
+        var sNaam = document.getElementById(myNewName).value;
+        var node = document.createElement("LI");                // Create a li node
+        var textNode = document.createTextNode(sNaam);          // Create a text node
+        node.appendChild(textNode);                             // Append the text to li
+        document.getElementById("myList").appendChild(node);    // Append li to ul with id myList
+    }
+    </script>
 </body>
 </html>
